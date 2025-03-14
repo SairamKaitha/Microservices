@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Welcome-Service
+
+#for admin client
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111
+
+#use only if we use eureka server port otherthan 8761
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# for actuators
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
